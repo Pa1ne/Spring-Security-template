@@ -1,0 +1,6 @@
+<div th:fragment="navigation (page)" class="bg-white">
+  <nav class="my-btn-group-vertical btn-group-vertical mt-3 mb-3 ">
+    <a sec:authorize="hasRole('ADMIN')" type="button" class="btn pl-2 pr-5" th:classappend="${page} == 'admin' ? btn-primary : btn-link" th:href="@{/admin}">Admin</a>
+    <a type="button" class="btn pl-0 pr-5" th:classappend="${page} == 'user' ? btn-primary : btn-link" th:href="@{/user}">User</a>
+  </nav>
+</div>
